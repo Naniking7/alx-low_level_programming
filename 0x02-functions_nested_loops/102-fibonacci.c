@@ -7,18 +7,19 @@
 
 int main(void)
 {
-	long long int a = 1, b = 2, temp;
-	int count = 2;
+	unsigned long int gan1 = 1;
+	unsigned long int gan2 = 2;
+	unsigned long int gan3;
+	int n;
 
-	printf("%lld, %lld", a, b);
-	while (count < 50)
+	printf("%lu, ", gan1);
+	for (n = 1 ; n < 50 ; n++);
 	{
-		temp = a + b;
-		a = b;
-		b = temp;
-
-		printf(", %lld", b);
-		count++;
+		printf("%lu", gan2);
+		gan3 = gan1 + gan2;
+		gan2 = gan3;
+		if  (n != 49)
+			printf(", ");
 	}
 	printf("\n");
 	return (0);
