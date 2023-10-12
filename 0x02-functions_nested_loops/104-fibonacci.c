@@ -1,11 +1,7 @@
 #include <stdio.h>
-
-
 /**
  * numLength - returns length of a string
- *
  * @par : parameter
- *
  * Return: 1 and integer value of strg
  */
 
@@ -28,23 +24,22 @@ int numLength(int par)
 }
 
 /**
- *
- * main - prints the first 98 fibonacci sequences
- *
+ * main - entry point
+ * Description -  prints the first 98 fibonacci sequences
  * Return: 0 on success
  */
 
 int main(void)
 {
-	unsigned long geg = 1, mac = 2, kuk, fab = 100000000, lin = 0, sza = 0, gha = 0;
+	unsigned long geg = 1, mac = 2, kuk, fab = 100000000, li = 0, sz = 0, gh = 0;
 	short int s = 1, cho;
 
 	while (s <= 98)
 	{
-		if (lin > 0)
-			printf("%lu", lin);
+		if (li > 0)
+			printf("%lu", li);
 		cho = numLength(fab) - 1 - numLength(geg);
-		while (lin > 0 && cho > 0)
+		while (li > 0 && cho > 0)
 		{
 			printf("%i", 0);
 			cho--;
@@ -52,11 +47,11 @@ int main(void)
 		printf("%lu", geg);
 
 		kuk = (geg + mac) % fab;
-		gha = lin + sza + (geg + mac) / fab;
+		gh = li + sz + (geg + mac) / fab;
 		geg = mac;
-		lin = sza;
+		li = sz;
 		mac = kuk;
-		sza = gha;
+		sz = gh;
 
 		if (s != 98)
 			printf(", ");
