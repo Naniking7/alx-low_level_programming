@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * more_numbers - prinys 0 to 14 x10
+ * more_numbers - prints 0 to 14 x10
  *
  * Return: void
  */
@@ -18,6 +18,6 @@ void more_numbers(void)
 				_putchar(b / 10 + '0');
 			_putchar(b % 10 + '0');
 		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
