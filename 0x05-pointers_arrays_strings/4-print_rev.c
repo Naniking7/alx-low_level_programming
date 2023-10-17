@@ -17,7 +17,7 @@ void print_rev(char *s)
 	}
 
 	last = len - 1;
-	for (cast >= 0; cast--)
+	for (; cast >= 0; cast--)
 	{
 		_putchar(s[cast]);
 	}
