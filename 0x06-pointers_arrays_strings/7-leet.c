@@ -13,7 +13,7 @@ char *leet(char *s)
 	char letters[] = "aAeEoOtTlL";
 	char lnumber1[] = "4433007711";
 
-	strnumner = 0;
+	strnumber = 0;
 	while (s[strnumber] != '\0')
 	{
 		lnumber = 0;
@@ -21,11 +21,11 @@ char *leet(char *s)
 		{
 			if (letters[lnumber] == s[strnumber])
 			{
-				[strnumber] = lnumber1[lnumber];
+				s[strnumber] = lnumber1[lnumber];
 			}
 			lnumber++;
 		}
-		strnumner++;
+		strnumber++;
 	}
 	return (s);
 }
