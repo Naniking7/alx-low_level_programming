@@ -26,7 +26,7 @@ char *cap_string(char *s)
 		{
 			if (s[number + 1] >= 97 && s[number + 1] <= 122)
 			{
-				s[number + 1] = s[numbet + 1] - 32;
+				s[number + 1] = s[number + 1] - 32;
 			}
 		}
 		number++;
