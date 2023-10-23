@@ -2,7 +2,7 @@
 
 /**
  * main - program finds and prints the sum of even value terms
- * 
+ *
  * Return: 0 on success
  */
 
