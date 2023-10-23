@@ -26,7 +26,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		return (0);
 	r[ov + 1] = '\0';
 	a--, b--, size_r--;
-	mgg = *(n1 + a) - 48, mgg = *(n2 + b) - 48;
+	mg = *(n1 + a) - 48, mgg = *(n2 + b) - 48;
 	while (ov >= 0)
 	{
 		dj = mg + mgg + sum;
