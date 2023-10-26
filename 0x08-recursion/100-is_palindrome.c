@@ -17,17 +17,17 @@ int _strlen_recursion(char *s)
 /**
  *helperfunction - checks if a string is palindrome
  *@s: pointer to a string
- *@1index: first index
- *@2index: last index
+ *@index1: first index
+ *@index2: last index
  *
  *Return: 1 if palindrome and 0 if not
  */
 
-int helperfunction(char *s, int 1index, int 2index)
+int helperfunction(char *s, int index1, int index2)
 {
-	if (1index < 2index && s[1ndex] == s[2index])
-		return (helperfunction(s, 1index + 1, 2index - 1));
-	if (s[1index] != s[2index])
+	if (index1 < index2 && s[index1] == s[index2])
+		return (helperfunction(s, index1 + 1, index2 - 1));
+	if (s[index1] != s[index2])
 	{
 		return (0);
 	}
@@ -50,6 +50,5 @@ int is_palindrome(char *s)
 
 	if (!*s)
 		return (1);
-
 	return (helperfunction(s, a, b));
 }
