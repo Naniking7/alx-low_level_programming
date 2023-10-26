@@ -12,14 +12,10 @@ int helperfunction(int n1, int ps)
 {
 	if ((ps * ps) == n1)
 		return (ps);
+	if ((ps * ps) > n1)
+		return (-1);
 	else
-	{
-		if ((ps * ps) > n1)
-			return (-1);
-		else
-			return (helperfunction(n1, ps + 1));
-
-	}
+		return (helperfunction(n1, ps + 1));
 }
 
 /**
