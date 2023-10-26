@@ -15,7 +15,7 @@ int helperfunction(int n1, int a)
 		if (n1 % a == 0)
 			return (0);
 		else
-			return (helperFunction(n1, a + 1));
+			return (helperfunction(n1, a + 1));
 	}
 	else
 	{
@@ -33,7 +33,6 @@ int helperfunction(int n1, int a)
 int is_prime_number(int n)
 {
 	if (n <= 1)
-	{
 		return (0);
 	else
 		return (helperfunction(n, 2));
