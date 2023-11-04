@@ -40,15 +40,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		result[strc] = s1[strc];
 		strc++;
 	}
-	while (n < lens2 && i < (lens1 + n))
+	while (n < lens2 && strc < (lens1 + n))
 	{
 		result[strc++] = s2[strres++];
 	}
 	while (n >= lens2 && strc < (lens1 + lens2))
 	{
-		reault[strc++] = s2[strres++];
+		result[strc++] = s2[strres++];
 	}
-	s[strc] = '\0';
+	result[strc] = '\0';
 
 	return (result);
 }
