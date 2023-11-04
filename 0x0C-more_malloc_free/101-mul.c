@@ -61,13 +61,13 @@ void errors_check(void)
 int main(int argc, char *argv[])
 {
 	char *arg1, *arg2;
-	int lenarg1, lenarg2, reslen, n = 0, ind, c, d1, d2;
+	int lenarg1, lenarg2, reslen, n = 0, ind, c, d1, d2, result;
 
 	arg1 = argv[1], arg2 = argv[2];
-	if (argc != 3 || !isAllDigits(arg1) || !isDigits(arg2))
-		errors();
-	lenarg1 = _strlen(arg1);
-	lenarg2 = _strlen(arg1);
+	if (argc != 3 || !isAllDigits(arg1) || !isAllDigits(arg2))
+		errors_check();
+	lenarg1 = string_length(arg1);
+	lenarg2 = string_length(arg1);
 	reslen = lenarg1 + lenarg2 + 1;
 	result = malloc(sizeof(int) * reslen);
 	if (!result)
@@ -76,9 +76,10 @@ int main(int argc, char *argv[])
 		result[ind] = 0;
 	for (lenarg1 = lenarg1 - 1; lenarg1 >= 0; lenarg1--)
 	{
-		d1 = arg1[len1] - '0';
+		d1
+		       	= arg1[len1] - '0';
 		c = 0;
-		for (lenarg2 = _strlen(arg2) - 1; lenarg2 >= 0; lenarg2--)
+		for (lenarg2 = string_length(arg2) - 1; lenarg2 >= 0; lenarg2--)
 		{
 			d2 =arg2[lenarg2] - '0';
 			c += result[lenarg1 + lenarg2 + 1] + (d1 * d2);
@@ -88,7 +89,7 @@ int main(int argc, char *argv[])
 		if (c > 0)
 			result[lenarg1 + lenarg2 + 1] += c;
 	}
-	for (ind = 0; inf < reslen - 1; ind++)
+	for (ind = 0; ind < reslen - 1; ind++)
 	{
 		if (result[ind])
 			n = 1;
